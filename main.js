@@ -12,12 +12,12 @@ scrollContainer.addEventListener("wheel", (evt) => {
 
 arrightBtn.addEventListener("click", () => {
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += 565;
+    scrollContainer.scrollLeft += 640;
 }); 
 
 arleftBtn.addEventListener("click", () => {
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft -= 565;
+    scrollContainer.scrollLeft -= 640;
 });
 
 //------------------------POPUP IMAGE------------------------------- 
