@@ -5,18 +5,25 @@
     box-sizing: border-box;
     }
 
+html{
+    height: 100%;
+}
+
 body{
-    background-image: linear-gradient(#9fbfdf, #33334d, #9fbfdf);
+    background: linear-gradient(45deg, rgba(183,204,246,0.5),rgba(7,43,118,0.8));
+    background-size: cover;
+    background-position: center;
 }
 
 h1{
     position: absolute;
-    margin: auto 32%;
-    top: 15%;
+    display: inline;
+    margin: auto 33%;
+    top: 10%;
     z-index: 1;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 5px;
-    font-size: 30px;
+    font-size: 34px;
     color: #fff;
     text-shadow: 3px -3px 6px rgba(255, 102, 102,0.8);    
 }
@@ -28,18 +35,13 @@ h1{
     margin: 30px;
 }
 
-#arleftBtn:hover{
+#arleftBtn:hover, #arrightBtn:hover{
     border-radius: 50%;
     box-shadow: 4px 4px 8px rgba(255, 0, 191, 0.6)
 }
 
-#arrightBtn:hover{
-    border-radius: 50%;
-    box-shadow: 4px 4px 6px rgba(255, 0, 191, 0.6)
-}
-
 .gallery{
-    width: 565px;
+    width: 640px;
     display: flex;
     overflow-x: scroll;
 }
@@ -63,8 +65,11 @@ h1{
     display: none;
 }
 
+.gallery{
+    scrollbar-width: none;
+}
+
 .gallery-wrap{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,13 +120,58 @@ h1{
     object-fit: cover;
 }
 
-@media (max-width:768px){
+@media (max-width:992px){
     .gallery-wrap .popup-image img{
-        width: 95%;
+        width: 100%;
+        width: 580px;
     }
     h1{
-        font-size: 14px;
-        top: 8%;
-        margin: auto 25%;     
+        font-size: 28px;
+        top: 13%;
+        margin: auto 28%;
     }
 }
+
+@media (max-width:820px){
+    body{
+        margin:50% 0;
+    }
+    .gallery-wrap .popup-image img{
+        width: 100%;
+        width: 580px;
+    }
+    h1{
+        font-size: 24px;
+        top: 25%;
+        margin: auto 30%;
+    }
+}
+
+@media (max-width:430px){
+    body{
+        margin:50% 0;
+    }
+    .gallery-wrap .popup-image img{
+       width: 95%;
+       width: 380px;
+    }
+    h1{
+       font-size: 16px;
+       top: 13%;
+       margin: auto 20%;
+    }
+    #arleftBtn, #arrightBtn{
+        width: 18px;
+        height: 18px;
+        margin: 5px;
+    }
+    .gallery{
+        width: 335x;
+    }
+    .gallery div{
+        grid-template-rows: auto;
+        grid-gap: 3px;
+        padding: 3px;
+    }
+}
+
