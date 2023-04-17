@@ -78,6 +78,10 @@ body{
     display: none;
 }
 
+.gallery{
+    scrollbar-width: none;
+}
+
 .gallery div img:hover{
     filter: grayscale(0);
     cursor: pointer;
